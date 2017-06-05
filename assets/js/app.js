@@ -33,7 +33,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 // Búsqueda Restaurantes
-/*
+
 var restaurantes = [
   
   {
@@ -107,4 +107,5 @@ var mostrarContactos = function (contactos) {
   });
   $(".contacts").html(plantillaFinal);
 };
-*/
+
+$(document).ready(cargarPagina);
