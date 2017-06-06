@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Fast Food MX</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/taco.png">
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css">
@@ -11,52 +11,63 @@
   </head>
   <body>
     <div class="container">
-      <nav>
-        <div class="nav-wrapper teal accent-3 col s12">
-          <a href="#!" class="brand-logo"> 🌮 Fast Food MX</a>
-          <div class="input-field right">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
+      <div class="col s12">
+        <nav>
+          <div class="nav-wrapper teal accent-3">
+            <a href="#!" class="brand-logo center"> 🌮 Fast Food MX</a>
+            <form id="search-form">
+              <div class="input-field right">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
           </div>
-        </div>
-      </nav>
-    <div id="map"></div>
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <img src="assets/img/Icon_food.png" alt="" class="circle">
-          <span class="title">Chilakillers</span>
-          <p>Loungeria <br>
-             Revolución 23, Col. Tacubaya 
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="assets/img/Icon_food.png" alt="" class="circle">
-          <span class="title">Pizza Hut</span>
-          <p>Pizzería <br>
-             Hamburgo 98, Col. Juárez
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="assets/img/Icon_food.png" alt="" class="circle">
-          <span class="title">Burguer King</span>
-          <p>Hamburguesas <br>
-             Insurgentes 325, Col. Condesa
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <img src="assets/img/Icon_food.png" alt="" class="circle">
-          <span class="title">Subway</span>
-          <p>Baguettes<br>
-            Insurgentes 327, Col. Condesa 
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-      </ul>
+        </nav>
+      </div>
+    <!--Map-->
+      <div class="col s12">
+        <div id="map"></div>
+      </div>
+    <!--Restaurantes-->
+      <div class="col s12">
+          <ul class="collection" id="restaurantes">
+            <li class="collection-item avatar">
+              <img src="assets/img/Icon_food.png" alt="" class="circle">
+              <span class="title">Chilakillers</span>
+              <p>Loungeria <br>
+                 Revolución 23, Col. Tacubaya 
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="assets/img/Icon_food.png" alt="" class="circle">
+              <span class="title">Pizza Hut</span>
+              <p>Pizzería <br>
+                 Hamburgo 98, Col. Juárez
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="assets/img/Icon_food.png" alt="" class="circle">
+              <span class="title">Burger King</span>
+              <p>Hamburguesas <br>
+                 Insurgentes 325, Col. Condesa
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+            <li class="collection-item avatar">
+              <img src="assets/img/Icon_food.png" alt="" class="circle">
+              <span class="title">Subway</span>
+              <p>Baguettes<br>
+                Insurgentes 327, Col. Condesa 
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+            </li>
+          </ul>
+      </div>
     </div>
+    <!--Scripts-->
     <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSgn_Gp2FRVxFWQvKEHgg1O_APs0zw_KE&callback=initMap"></script>
