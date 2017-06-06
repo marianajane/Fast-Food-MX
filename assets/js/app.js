@@ -168,8 +168,7 @@ var mostrarRestaurantes = function (restaurante) {
     
   });
   $("#restaurantes").html(plantillaFinal);
+  $(".restaurante").click(cambiarUbicacion);
 };
 
-$(document).ready(cargarPagina);
-
-//Ubicaciones 
+$(document).ready(buscar);
