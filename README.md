@@ -11,7 +11,7 @@ Mostrar la lista de restaurantes en el HTML.
 ### Versión 0.3.0
 Filtrar la lista de restaurantes con base en un texto ingresado (pueden escoger el criterio de búsqueda: tipo de comida, nombre de restaurante, dirección, etc.).
 
-### Versión 0.4.0
+### Versión 0.4.2
 Cambiar la ubicación del usuario en el mapa por la ubicación del restaurante cuando se le de clic.
 Extra
 Filtrar mientras escribe (no al dar enter o clic en un botón).
