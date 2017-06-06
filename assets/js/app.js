@@ -108,31 +108,39 @@ var restaurante = [
     "nombre": "Chilakillers",
     "giro":"Loungeria",
     "direccion": "Revolución 23, Col. Tacubaya",
+    "lat":"19.4067469",
+    "lng":"-99.1845839"
   },
   
   {
     "nombre": "Pizza Hut",
     "giro":"Pizzería",
     "direccion": "Hamburgo 98, Col. Juárez",
+    "lat":"19.426595",
+    "lng":"-99.16372460000002"
   },
 
   {
     "nombre": "Burguer King",
     "giro":"Hamburguesas",
     "direccion": "Insurgentes 325, Col. Condesa",
+    "lat":"19.413052",
+    "lng":"-99.16633910000002"
   },
 
   {
     "nombre": "Subway",
     "giro":"Baguettes",
     "direccion": "Insurgentes 327, Col. Condesa",
+    "lat":"19.4131421",
+    "lng":"-99.16648650000002"
   }
 ];
 
 var plantillaContacto = '<ul class="collection" id="restaurantes">'+
         '<li class="collection-item avatar">'+
           '<img src="assets/img/Icon_food.png" alt="" class="circle">'+
-          '<span class="title restaurante">__nombre__</span>'+
+          '<span class="title restaurante" data-latitud="__lat__" data-longitud="__lng__">__nombre__</span>'+
           '<p>__giro__<br>'+
              '__direccion__'+
           '</p>'+
@@ -140,7 +148,7 @@ var plantillaContacto = '<ul class="collection" id="restaurantes">'+
         '</li>';
 
 
-var cargarPagina = function () {
+var buscar = function () {
   $("#search-form").submit(filtrarRestaurantes);
 };
 
@@ -156,7 +164,7 @@ var filtrarRestaurantes = function (e) {
 var mostrarRestaurantes = function (restaurante) {
   var plantillaFinal = "";
   restaurante.forEach(function (restaurante) {
-    plantillaFinal += plantillaContacto.replace("__nombre__", restaurante.nombre).replace("__giro__", restaurante.giro).replace("__direccion__", restaurante.direccion);
+    plantillaFinal += plantillaContacto.replace("__nombre__", restaurante.nombre).replace("__giro__", restaurante.giro).replace("__direccion__", restaurante.direccion).replace("__lat__", restaurante.lat).replace("__lng__",restaurante.lng);
     
   });
   $("#restaurantes").html(plantillaFinal);
